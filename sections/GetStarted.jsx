@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 import { StartSteps, TitleText, TypingText } from "../components";
 import { startingFeatures } from "../constants";
 import styles from "../styles";
@@ -20,9 +20,11 @@ const GetStarted = () => (
         whileInView="show"
         className={`flex-1 ${styles.flexCenter}`}
       >
-        <img
+        <Image
           src="/get-started.png"
           alt="get-started"
+          width="1403"
+          height="1535"
           className="w-[90%] h-[90%] object-contain"
         />
       </motion.div>

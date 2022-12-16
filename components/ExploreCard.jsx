@@ -1,6 +1,6 @@
 "use client";
-
 import { motion } from "framer-motion";
+import Image from "next/image";
 import styles from "../styles";
 import { fadeIn } from "../utils/motion";
 
@@ -12,9 +12,13 @@ const ExploreCard = ({ id, imgUrl, title, active, heandleClick, index }) => (
     } flex justify-center items-center min-w-[170px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
     onClick={() => heandleClick(id)}
   >
-    <img
+    <Image
       src={imgUrl}
       alt="im"
+      width="3624"
+      height="1689"
+      placeholder="blur"
+      blurDataURL="/planet-01.png"
       className="absolute w-full h-full rounded-[24px] object-cover"
     />
     {active !== id ? (
@@ -26,9 +30,11 @@ const ExploreCard = ({ id, imgUrl, title, active, heandleClick, index }) => (
         <div
           className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism mb-[16px]`}
         >
-          <img
+          <Image
             src="/headset.svg"
             alt="headset"
+            width="60"
+            height="60"
             className="w-1/2 h-1/2 object-contain"
           />
         </div>

@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 import { NewFeatures, TitleText, TypingText } from "../components";
 import { newFeatures } from "../constants";
 import styles from "../styles";
@@ -32,9 +32,11 @@ const WhatsNew = () => (
         whileInView="show"
         className={`flex-1 ${styles.flexCenter}`}
       >
-        <img
+        <Image
           src="/whats-new.png"
           alt="whats-new"
+          width="1403"
+          height="1404"
           className="w-[90%] h-[90%] object-contain"
         />
       </motion.div>
